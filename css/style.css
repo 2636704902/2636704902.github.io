@@ -36,7 +36,8 @@ html,body{
 .section{
     width: 100%;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
     flex: 1;
     background: #f5f5f5;
 }

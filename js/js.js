@@ -45,7 +45,7 @@ var mySwiper = new Swiper ('.swiper-container', {
 })
 var obj = {}
 // 请求数据
-$.get('https://wksc.99114.com//product/detail?id=' + getUrlStr('id') , function(res){
+$.get('https://wksc.99114.com/product/detail?id=' + getUrlStr('id') , function(res){
     obj = res.obj
     // 标题
     $('#headerText').text(res.obj.name)
@@ -96,9 +96,9 @@ $.ajax({
         success: function(data) {
             var timestamp = Date.parse(new Date()),
                 nonceStr = randomString(20),
-                url = location.href;
+                url = location.href.split('#')[0];
             var string1 = `jsapi_ticket=${data}&noncestr=${nonceStr}&timestamp=${timestamp}&url=${url}`
-            // console.log(SHA1(string1))
+            console.log(encodeURIComponent(url))
             wx.config({
                 debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
                 appId: 'wxe3c0e6248494fcc9', // 必填，公众号的唯一标识
@@ -106,6 +106,10 @@ $.ajax({
                 nonceStr, // 必填，生成签名的随机串
                 signature: SHA1(string1),// 必填，签名
                 jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] // 必填，需要使用的JS接口列表
+            });
+            wx.error(function(res){
+                console.log(res)
+                // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
             });
             wx.ready(function(){
                 $.get('https://wksc.99114.com//product/detail?id=' + getUrlStr('id') , function(res){
