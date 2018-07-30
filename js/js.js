@@ -1,4 +1,4 @@
-// 获取地址栏参数
+﻿// 获取地址栏参数
 function getUrlStr(name) {
     var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
     var r = window.location.search.substr(1).match(reg)
@@ -90,7 +90,7 @@ $('#detail').on('click',function(e){
 
 // 微信分享
 $.ajax({
-        url: 'https://wksc.99114.com/school/getat',
+        url: 'https://wksc.99114.com/school/gettt',
         type: "GET",
         async:false,
         success: function(data) {
