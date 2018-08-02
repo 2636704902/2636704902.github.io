@@ -1,21 +1,288 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <meta name="screen-orientation" content="portrait"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="full-screen" content="yes">
-    <meta name="x5-fullscreen" content="true">
-    <title>elm</title>
-    <link href="./static/css/app.css" rel="stylesheet"></head>
-  <body>
-    <div id="app">
-    	<router-view></router-view>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简历</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<aside>
+	<a class="cur_a"><span>首页</span></a>
+	<a><span>关于我</span></a>
+	<a><span>技能</span></a>
+	<a><span>经验</span></a>
+	<a><span>联系我</span></a>
+</aside>	
+<section class="page_one" id="page1">
+	<nav>
+		<div class="nav_wrap">
+			<div class="resume_logo">
+				<a href="index.html">Resume</a>
+			</div>
+			<div class="nav_bar">
+				<ul class="nav_bar_ul">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">page2</a></li> 
+					<li><a href="#">page3</a></li>
+					<li><a href="#">page4</a></li>
+					<li><a href="#">page5</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="cen_con">
+		<div class="portrait">
+            <img onmousemove="this.src='images/22.png'"/ onmouseout="this.src='images/portrait1.jpg'"/ src="images/portrait1.jpg">
+        </div>
+		<div class="cen_text">
+			<h2>世上只有想不通的人，没有走不通的路。</h2>
+			<hr>
+			<h3>张玉东</h3>
+			<h3>Web前端工程师</h3>
+			<h3>求职北京 / 上海</h3>
+			<h3>13311595201</h3>
+		</div>
+		
+	</div>
+	<div class="down_arrow">
+		<a class="scroll"><span></span></a> 
+	</div>
+	
+</section>
+
+<section class="page_two" id="page2">
+	<div class="con_wrap">
+		<div class="tit_wrap">
+			<h1>关于我</h1>
+			<div class="scissors">
+				<span></span>
+			</div>
+			<h2> 如果debugging是一种消灭bug的过程,那编程就一定是把bug放进去的过程。</h2>
+		</div>		
+		<div class="myinfo">
+			<table>
+				<tbody>
+					<tr>
+						<td rowspan="6">
+							<img src="images/portrait1.jpg">
+						</td>
+						<td>姓名 | 张玉东</td>
+						<td>手机 | 13311595201</td>
+					
+					</tr>
+					<tr>
+						<td>性别 | 男</td>
+						<td>邮箱 | 13311595201@163.com</td>
+					</tr>
+					<tr>
+						<td>出生 | 1995.07.16</td>
+						
+						<td>WX | 13311595201</td>
+					</tr>
+					<tr>
+						<td>居住 | 北京海淀</td>
+						<td>户籍 | 河南信阳</td>
+					</tr>
+					<tr>
+						<td>学历 | 本科</td>
+						<td>学校 | 安徽新华学院</td>
+					</tr>
+					<tr>
+						<td>专业 | 计算机科学与技术</td>
+						<td>英语 | 英语六级</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<p>项目：</p><br>
+							<a href="http://www.1-yd.com/">1. 闻行一阅读（基于Amaze UI 查看网址：www.1-yd.com）</a><br>
+							<a>2. 中笕-汽车保养（基于Metronic的Bootstrap，内部项目，无法展示）</a><br><br>
+							<p>小作品 （查看网址：www.zhangyudong.xyz）</p><br>
+							<a href="www.zhangyudong.xyz">1. 手工皂（注：瀑布流本地没问题） </a>
+							<a href="www.zhangyudong.xyz">2. 个人主页 </a>
+							<a href="www.zhangyudong.xyz">3. 手工皂 </a><br>
+
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="down_arrow">
+		<a class="scroll"><span></span></a> 
+	</div>
+</section>
+<section class="page_three" id="page3">
+	<div class="con_wrap">
+		<div class="tit_wrap">
+			<h1>技能</h1>
+			<div class="scissors">
+				<span></span>
+			</div>
+			<h2>代码，我们眼中的世界，别人眼中的天书。</h2>	
+		</div>
+		<div class="skill_con">
+			<div class="canvas_wrap">
+				<div class="canvas_con">
+					<div class="text_con">
+						<p class="percent">90%</p>
+						<p class="chart_title">HTML5</p>
+					</div>
+					<canvas id="html5" width=160 height=160></canvas>
+				</div>
+				<div class="canvas_con">
+					<div class="text_con">
+						<p class="percent">90%</p>
+						<p class="chart_title">CSS3</p>
+					</div>
+					<canvas id="css3" width=160 height=160></canvas>
+				</div>
+				<div class="canvas_con">
+					<div class="text_con">
+						<p class="percent">75%</p>
+						<p class="chart_title">JS</p>
+					</div>
+					<canvas id="js" width=160 height=160></canvas>
+				</div>
+				<div class="canvas_con">
+					<div class="text_con">
+						<p class="percent">80%</p>
+						<p class="chart_title">JQUERY</p>
+					</div>
+					<canvas id="jq" width=160 height=160></canvas>
+				</div>
+				<div class="canvas_con">
+					<div class="text_con">
+						<p class="percent">80%</p>
+						<p class="chart_title">VUE</p>
+					</div>
+					<canvas id="bs" width=160 height=160></canvas>
+				</div>
+				<div class="canvas_con">
+					<div class="text_con">
+						<p class="percent">50%</p>
+						<p class="chart_title">REACT</p>
+					</div>
+					<canvas id="ps" width=160 height=160></canvas>
+				</div>
+			</div>
+			<div class="text_wrap">
+				<p>1.熟练HTML5+CSS3进行网页布局，善于使用CSS 预处理器（Scss、Sass）进行样式的编写等。</p>
+				<p>2.熟练运用 vue-router、vuex以及mint-ui的一些组件，开发vue项目。</p>
+				<p>3.熟练运用redux、react-router、es6、react-dom以及借用antd组件，开发react项目。了解dva框架。</p>
+				<p>4.运用过jQuery开发过项目，熟悉Zepto、iscroll以及javaScript各种库的使用。</p>
+				<p>5.熟悉 ES6新特性：结构、Symbol、async、箭头函数以及promise等。</p>
+				<p>6.熟练使用Ajax、axios、Fetch、Node.js能够很好的与后台工程师完成数据交互工作。</p>
+				<p>7.熟练使用Postman测试接口以及Charles抓包工具，掌握gulp、webpack前端构建工具。</p>
+			</div>	
+		</div>
+		
+	</div>
+	<div class="down_arrow">
+		<a class="scroll"><span></span></a> 
+	</div>
+</section>
+<section class="page_four" id="page4">
+    <div class="con_wrap">
+		<div class="tit_wrap">
+			<h1>工作经验</h1>
+			<div class="scissors">
+				<span></span>
+			</div>
+			<h2>我现在做的一切仅仅是为了不让未来的自己后悔。</h2>
+		</div>
+	  	<div class="work_con">
+	  		<div class="programe">
+		    	<div class="work_time">3个月<br>大V店</div>
+			    <div class="work_text">
+			      	<div class="triangle-left"></div>
+			      	<div class="exCon">
+				        <h4>开发时间：2017 /07--至今</h4>
+				        <h5>技术栈：vue全家桶 es6 node.js webpack</h5>
+				        <p>责任描述：</p>
+						<p>1.	使用vue-router进行构建单页面应用，实现路由的跳转。</p>
+						<p>2.	在购物车这块用vuex进行数据状态的管理，解决组件传值等。</p>
+						<p>3.	使用fetch进行请求数据进行完成页面的渲染，对于一些公共的方法还进行了封装。</p>
+						<p>4.	搜索功能这块获取input框的value值，如果是空就不发送请求否则就把value值发送给后台进行匹配返回数值，用onkeyup事件时候，我们用到函数的节流，解决短时	间内多次触发事件。</p>
+						<p>5.	在加入购物车这个模块判断用户是否登录，从而进行相应的操作。</p>
+						<p>6.	还是用些第三方插件进行页面功能的实现，例如：better-scroll、vue-awesome-swiper。</p>
+					</div>
+			    </div> 
+			</div>
+			<div class="programe">
+				<div class="work_time">5个月<br>MAMA+</div>
+		    	<div class="work_text">
+		      		<div class="triangle-left"></div>
+		      		<div class="exCon">
+				        <h4>开发时间：2017 /03--2017 / 09</h4>
+				        <h5>技术栈：react.js webpack jsx antd redux</h5>
+				        <p>责任描述：</p>
+				        <p>1. 整个项目使用react.js+webpack手动搭建项目架构。</p>
+						<p>2. 用jsx+css+antd实现页面的布局。</p>
+						<p>3. 使用axios请求后台数据，实现页面的动态渲染。</p>
+						<p>4. 使用redux来管理和更新数据来改变视图。</p>
+						<p>5. 使用react-router实现页面的跳转以及动态的传参。</p>
+						<p>6. 使用webpack构建工具来进行项目的打包，提高页面加载性能。</p>
+						<p>7. 对于一些公共方法以及组件进行封装。</p>
+		      		</div>
+		    	</div>
+		    </div>
+		</div>
     </div>
-    <script type="text/javascript" src="./static/js/manifest.js">
-    </script><script type="text/javascript" src="./static/js/vendor.js">
-    </script><script type="text/javascript" src="./static/js/app.js"></script>
-  </body>
+	<div class="down_arrow">
+		<a class="scroll"><span></span></a> 
+	</div>
+</section>
+<section class="page_five" id="page5">
+	<div class="con_wrap">
+		<div class="tit_wrap">
+			<h1>联系我</h1>
+			<div class="scissors">
+				<span></span>
+			</div>	
+			<h2>耐得住寂寞，做得成大事。</h2>
+		</div>
+		<div class="contact_detail">
+			<ul class="con_style">
+				<li>
+					<span></span>
+					<p>北京市海淀区</p>
+				</li>
+				<li>
+					<span></span>
+					<p>13311595201@163.com</p>
+				</li>
+				<li>
+					<span></span>
+					<p>13311595201</p>
+				</li>
+			</ul>
+			<div class="contact_info">
+				<form action="" method="get">
+				<label>
+					<input type="text" id="username" placeholder="你的名字" required="">
+					<p  id="check_username"></p>
+				</label>
+				<label>
+					<input type="text" id="usermail" placeholder="你的邮箱" required="">
+					<p id="check_usermail"></p>
+				</label>	
+				<label>
+					<input type="text" id="usertheme" placeholder="主题" required="" maxlength="25">
+					<p id="check_usertheme"></p>
+				</label>	
+				<label>
+					<textarea id="usercon" placeholder="内容" required=""></textarea>
+					<p id="check_usercon" ></p>
+				</label>					
+					<button>发送</button>
+				</form>
+			</div>
+		</div>
+	</div>	
+</section>
+
+</body>
+<script type="text/javascript" src="js/main.js"></script>
 </html>
